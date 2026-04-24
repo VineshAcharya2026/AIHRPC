@@ -1,11 +1,27 @@
-<div align="center">
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+# AIHRPC Portal Setup Instructions
 
-  <h1>Built with AI Studio</h2>
+## Backend Setup (FastAPI)
+1. Ensure Python 3.8+ is installed.
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run the server:
+   ```bash
+   python main.py
+   ```
+   The API will be available at `http://localhost:8000`. Documentation at `/docs`.
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Frontend Setup (React + Vite)
+1. This is a standard Vite project.
+2. Run development server:
+   ```bash
+   npm run dev
+   ```
+3. The frontend is configured to communicate with the backend at `localhost:8000`.
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
-
-</div>
+## Production Deployment
+- Set `JWT_SECRET` and `GMAIL_APP_PASSWORD` environment variables.
+- Use a production-grade WSGI/ASGI server like Gunicorn with Uvicorn workers.
+- Change `ADMIN_EMAIL` to your official address in `main.py`.

@@ -1,0 +1,7 @@
+{
+  "name": "All India Human Rights Protection Commission Portal",
+  "description": "A comprehensive public service portal for human rights awareness, grievance redressal, and legal information in India. Built for reliability, accessibility, and transparency.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
